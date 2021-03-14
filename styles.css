@@ -1,0 +1,754 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body,html{
+    overflow-x: hidden;
+    background: hsl(0, 26%, 96%);
+}
+
+/** Header starts here **/
+
+.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(images/bg-pattern-intro.svg);
+    background-position: center;
+    background-size: 150%;
+    padding: 4rem 10rem;
+    border-bottom-left-radius: 6rem;
+    background-repeat: no-repeat;
+    background-color: hsl(353, 100%, 62%);
+}
+
+.header .navigation{
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation .site-nav{
+    flex: 1;
+    margin-left: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation .site-nav li{
+    margin-right: 1.5rem;
+    list-style: none;
+    position: relative;
+}
+
+.header .navigation .site-nav li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: 1s;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header .navigation .site-nav li a:hover{
+    text-decoration: underline;
+}
+
+.header .navigation .site-nav li img{
+    margin-left: .5rem;
+    transition: .5s;
+}
+
+.header .navigation .site-nav li:hover img{
+    transform: rotate(-180deg);
+}
+
+.header .navigation .site-nav li .dropdown-menu{
+    display: none;
+    transition: .5s;
+    z-index: 10;
+}
+
+.header .navigation .site-nav li:hover .dropdown-menu{
+    display: block;
+}
+
+.header .navigation .site-nav li .dropdown-menu ul{
+    position: absolute;
+    margin-top: .2rem;
+    margin-left: -2rem;
+    background: hsl(0, 0%, 100%);
+    padding: 1.5rem;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.4);
+}
+
+.header .navigation .site-nav li .dropdown-menu ul li{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.header .navigation .site-nav li .dropdown-menu ul li:last-child{
+    margin-bottom: 0;
+}
+
+.header .navigation .site-nav li .dropdown-menu ul li a{
+    color: hsl(240, 0%, 56%);
+    transition: .5s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header .navigation .site-nav li .dropdown-menu ul li a:hover{
+    color: hsl(0, 0%, 5%);
+}
+
+.header .navigation .register{
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation .register li{
+    margin-left: 2rem;
+    list-style: none;
+}
+
+.header .navigation .register li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header .navigation .register li .signup{
+    padding: .8rem 2.5rem;
+    background: hsl(0, 0%, 100%);
+    color: hsl(356, 100%, 66%);
+    border: none;
+    border-radius: 2rem;
+    transition: .5s;
+}
+
+.header .navigation .register li .signup:hover{
+    background: hsl(355, 100%, 74%);
+    color: hsl(0, 0%, 100%);
+}
+
+.header .navigation #mobilemenu{
+    display: none;
+}
+
+.header .header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.header .header-content h1{
+    font-size: 3.5rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1rem;
+    font-family: 'Overpass', sans-serif;
+}
+
+.header .header-content p{
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.header .header-content .header-content-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-content .header-content-links li{
+    list-style: none;
+    margin: 0 .5rem;
+}
+
+.header .header-content .header-content-links li a{
+    text-decoration: none;
+    padding: .7rem 1.5rem;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header .header-content .header-content-links li .start{
+    background: hsl(0, 0%, 100%);
+    color: hsl(353, 100%, 62%);
+    border-radius: 2rem;
+    transition: .5s;
+}
+
+.header .header-content .header-content-links li .start:hover{
+    background: hsl(355, 100%, 74%);
+    color: hsl(0, 0%, 100%);
+}
+
+.header .header-content .header-content-links li .learn{
+    background: transparent;
+    color: hsl(0, 0%, 100%);
+    border-radius: 2rem;
+    transition: .5s;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+
+.header .header-content .header-content-links li .learn:hover{
+    background: hsl(0, 0%, 100%);
+    color: hsl(355, 100%, 74%);
+}
+
+.mobilenav{
+    display: none;
+}
+
+/** Blogr Description starts here **/
+
+.description{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 10rem 0 3rem 10rem;
+    background: hsl(0, 26%, 96%);
+    z-index: 2;
+}
+
+.description h2{
+    font-size: 2.5rem;
+    color: hsl(208, 49%, 24%);
+    text-align: center;
+    margin-bottom: -4rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+}
+
+.description .description-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.description .description-content .description-content-leftcolumn{
+    flex-basis: 50%;
+}
+
+.description .description-content .description-content-leftcolumn h3{
+    font-size: 1.8rem;
+    color: hsl(208, 49%, 24%);
+    margin-bottom: 2.5rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+}
+
+.description .description-content .description-content-leftcolumn p{
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+}
+
+.description .description-content .description-content-rightcolumn{
+    position: relative;
+    flex-basis: 50%;
+}
+
+.description .description-content .description-content-rightcolumn .desktop-editor{
+    width: 150%;
+    position: relative;
+}
+
+.description .description-content .description-content-rightcolumn .mobile-editor{
+    display: none;
+}
+
+/** Services starts here **/
+
+.services{
+    width: 100%;
+    padding: 8rem 10rem;
+    position: relative;
+    background: hsl(237, 17%, 21%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+}
+
+.services .services-rightcolumn{
+    flex-basis: 50%;
+}
+
+.services .services-rightcolumn h4{
+    font-size: 2.3rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 2rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+}
+
+.services .services-rightcolumn p{
+    font-size: 1.1rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    line-height: 1.9rem;
+}
+
+.services .services-leftcolumn{
+    flex-basis: 40%;
+    position: relative;
+    background-image: url(images/illustration-phones.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.services .services-leftcolumn .phone{
+    position: absolute;
+    left: -5rem;
+    top: -16rem;
+    z-index: 3;
+}
+
+.services .services-leftcolumn .circle-pattern{
+    position: absolute;
+    left: -25rem;
+    top: -50rem;
+    z-index: 1;
+    width: 250%;
+}
+
+/** Features starts here **/
+
+.features{
+    width: 100%;
+    position: relative;
+    padding: 15rem 10rem 15rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(0, 26%, 96%);
+    z-index: 2;
+}
+
+.features .features-leftcolumn{
+    flex-basis: 50%;
+    position: relative;
+}
+
+.features .features-leftcolumn .desktop-illustration{
+    width: 150%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -16rem;
+}
+
+.features .features-leftcolumn .mobile-illustration{
+    display: none;
+}
+
+.features .features-rightcolumn{
+    flex-basis: 40%;
+    position: relative;
+}
+
+.features .features-rightcolumn h5{
+    font-size: 1.8rem;
+    color: hsl(208, 49%, 24%);
+    margin-bottom: 1.5rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+}
+
+.features .features-rightcolumn p{
+    font-size: .95rem;
+    color: hsl(208, 49%, 24%);
+    margin-bottom: 3rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    line-height: 2.1rem;
+}
+
+/** Footer starts here **/
+
+footer{
+    width: 100%;
+    padding: 4rem 10rem 6rem;
+    background: hsl(240, 10%, 16%);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-top-right-radius: 6rem;
+}
+
+footer .footer-box{
+    flex-basis: 20%;
+}
+
+footer .footer-box h6{
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+footer .footer-box ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+footer .footer-box ul li a{
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+    font-size: 1rem;
+    transition: .5s;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+footer .footer-box ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .attribution{
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: hsl(240, 2%, 79%);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+footer .attribution a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+/** Responsive Design starts here **/
+
+@media (max-width: 991px){
+    .header{
+        background: url(images/bg-pattern-intro.svg);
+        background-position: center;
+        background-size: 400%;
+        padding: 4rem 1.5rem;
+        background-color: hsl(353, 100%, 62%);
+    }
+
+    .header .navigation{
+        justify-content: space-between;
+    }
+
+    .header .navigation .site-nav{
+        display: none;
+    }
+
+    .header .navigation .register{
+        display: none;
+    }
+
+    .header .navigation #mobilemenu{
+        display: block;
+    }
+
+    .header .header-content{
+        padding: 0 1.5rem;
+    }
+
+    .header .header-content h1{
+        font-size: 2.3rem;
+    }
+
+    .header .header-content p{
+        margin-bottom: 4rem;
+    }
+
+    .header .header-content .header-content-links li a{
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .description{
+        padding: 4rem 2rem 8rem;
+    }
+
+    .description h2{
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .description .description-content{
+        flex-wrap: wrap;
+    }
+
+    .description .description-content .description-content-rightcolumn {
+        position: relative;
+        flex-basis: 100%;
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .description .description-content .description-content-rightcolumn .desktop-editor{
+        display: none;
+    }
+
+    .description .description-content .description-content-rightcolumn .mobile-editor{
+        display: block;
+        width: 110%;
+        margin-bottom: 1.5rem;
+    }
+
+    .description .description-content .description-content-leftcolumn {
+        flex-basis: 100%;
+        order: 2;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .description .description-content .description-content-leftcolumn h3{
+        margin-bottom: 1rem;
+    }
+
+    .description .description-content .description-content-leftcolumn p{
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+
+    .services{
+        padding: 8rem 2rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .services .services-rightcolumn{
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 6rem;
+    }
+
+    .services .services-leftcolumn .phone{
+        position: absolute;
+        left: 125%;
+        transform: translateX(-50%);
+        top: -19rem;
+        z-index: 3;
+        width: 375px;
+    }
+
+    .features{
+        padding: 4rem 2rem;
+        flex-wrap: wrap;
+    }
+
+    .features .features-leftcolumn{
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .features .features-leftcolumn .desktop-illustration{
+        display: none;
+    }
+
+    .features .features-leftcolumn .mobile-illustration{
+        display: block;
+        width: 130%;
+        margin-bottom: 1.5rem;
+    }
+
+    .features .features-rightcolumn{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .features .features-rightcolumn h5{
+        font-size: 1.7rem;
+    }
+
+    footer{
+        padding: 4rem 0 6rem;
+        flex-wrap: wrap;
+    }
+
+    footer .footer-box{
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    footer .attribution{
+        font-size: .9rem;
+    }
+
+    footer .attribution a{
+        font-size: .9rem;
+    }
+
+    #mobilenav{
+        display: block;
+        position: absolute;
+        top: 8.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        padding: 2rem 1.5rem;
+        background: hsl(0, 0%, 100%);
+        box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        border: none;
+        border-radius: .5rem;
+        z-index: 10;
+        transition: .5s;
+    }
+
+    .mobilenav ul li{
+        list-style: none;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobilenav ul li a{
+        text-decoration: none;
+        color: hsl(240, 10%, 16%);
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+    }
+
+    .mobilenav ul li img{
+        margin-left: .5rem;
+        transition: .5s;
+    }
+
+    .mobilenav ul li:nth-child(3){
+        position: relative;
+    }
+
+    .mobilenav ul li:hover img{
+        transform: rotate(-180deg);
+    }
+
+    .mobilenav ul .connect{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobilenav ul .connect .connect-text{
+        display: flex;
+        align-items: center;
+    }
+
+    .mobilenav ul .connect .dropdown-menu-mobile{
+        background: hsl(0, 10%, 92%);
+        padding: 1.5rem 0;
+        width: 100%;
+        border-radius: .5rem;
+        display: none;
+        transition: 2s;
+    }
+
+    .mobilenav ul .connect:hover .dropdown-menu-mobile{
+        display: block;
+    }
+
+    .mobilenav ul .connect .dropdown-menu-mobile li:last-child{
+        margin-bottom: 0;
+    }
+
+    .mobilenav ul hr{
+        display: block;
+        border: none;
+        border-top: 1px solid hsl(0, 4%, 85%);
+        margin: 2rem auto 2rem;
+        width: 100%;
+    }
+
+    .mobilenav ul .signup{
+        margin-bottom: 0;
+    }
+
+    .mobilenav ul .signup a{
+        padding: .8rem 2.5rem;
+        background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: hsl(0, 0%, 100%);
+        border-radius: 2rem;
+        transition: .5s;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+    }
+
+    .mobilenav ul .signup a:hover{
+        background: linear-gradient(90deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+    }
+}
+
+@media (max-width: 320px){
+    .header .header-content h1{
+        font-size: 1.9rem;
+    }
+
+    .header .header-content .header-content-links li .start{
+        padding: 1rem;
+        font-size: .8rem;
+    }
+
+    .header .header-content .header-content-links li .learn{
+        padding: 1rem;
+        font-size: .8rem;
+    }
+
+    .description h2{
+        font-size: 1.5rem;
+    }
+
+    .description .description-content .description-content-leftcolumn h3{
+        font-size: 1.5rem;
+    }
+
+    .services .services-leftcolumn .phone{
+        width: 320px;
+    }
+
+    .services .services-rightcolumn{
+        margin-top: 2rem;
+    }
+
+    .services .services-rightcolumn h4{
+        font-size: 2.1rem;
+    }
+
+    footer .attribution{
+        font-size: .7rem;
+    }
+
+    footer .attribution a{
+        font-size: .7rem;
+    }
+}
