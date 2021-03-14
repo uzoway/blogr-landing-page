@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Blogr landing page coding challenge](./design/desktop-preview.jpg))
+![Blogr landing page coding challenge](./design/desktop-preview.jpg)
 
 ### Links
 
@@ -72,7 +72,7 @@ While working through this project, I noticed I still needed to perfect using JS
 ## Author
 
 - Website - [Github/Uzoway](https://github.com/uzoway)
-- Frontend Mentor - [@yuzoway](https://www.frontendmentor.io/profile/uzoway)
-- Twitter - [@uzowayy](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@uzoway](https://www.frontendmentor.io/profile/uzoway)
+- Twitter - [@Uzoway_](https://twitter.com/Uzoway_)
 
 Thanks for checking out this project.
