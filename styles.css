@@ -467,6 +467,18 @@ footer .attribution a{
         display: none;
     }
 
+    .header .header-content .header-content-links li .start{
+        padding: 1rem;
+        font-size: .8rem;
+        display: block;
+    }
+
+    .header .header-content .header-content-links li .learn{
+        padding: 1rem;
+        font-size: .8rem;
+        display: block;
+    }
+
     .header .navigation #mobilemenu{
         display: block;
     }
