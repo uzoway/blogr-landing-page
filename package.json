@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/uzoway/blogr-landing-page/issues"
   },
-  "homepage": "https://github.com/uzoway/blogr-landing-page#readme"
+  "homepage": "https://github.com/uzoway/blogr-landing-page#readme",
+  "dependencies": {
+    "terser": "^5.9.0"
+  }
 }
